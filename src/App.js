@@ -18,7 +18,7 @@ const ADMIN_CREDENTIALS = {
 
 const PRICE_PER_HOUR = 300;
 const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=Darwin+Higher+Primary+School+Devadurga+Road";
-const DEVELOPER_LINK = "https://www.instagram.com/mayur_dammannanavar"; 
+const DEVELOPER_LINK = "https://portfolio-67p.pages.dev/"; 
 
 // --- TIME LOGIC ---
 const getAvailableSlots = (dateString) => {
