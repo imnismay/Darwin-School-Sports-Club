@@ -12,8 +12,8 @@ import { faTableTennisPaddleBall, faBaseballBatBall, faPrint, faFileCsv, faTrash
 
 // --- CONFIGURATION ---
 const ADMIN_CREDENTIALS = {
-  username: "admin",
-  password: "12345" 
+  username: "",
+  password: "" 
 };
 
 const PRICE_PER_HOUR = 300;
