@@ -4,15 +4,16 @@ import { getFirestore } from "firebase/firestore";
 
 // 🔴 REPLACE THIS VARIABLE WITH YOUR COPIED CONFIG FROM FIREBASE CONSOLE 🔴
 const firebaseConfig = {
-  apiKey: "AIzaSyDuy3qRqt9nc668NHNAWIyXsBuRRPNicC8",
-  authDomain: "darwin-sports-fe2b5.firebaseapp.com",
-  projectId: "darwin-sports-fe2b5",
-  storageBucket: "darwin-sports-fe2b5.firebasestorage.app",
-  messagingSenderId: "825616469213",
-  appId: "1:825616469213:web:b842c5fd18ebfcf4035f34"
+  apiKey: "YOUR API",
+  authDomain: "YOUR AUTHDOMAIN.firebaseapp.com",
+  projectId: "YOUR PROJECT ID",
+  storageBucket: "YOUR STORAGE BACKET.firebasestorage.app",
+  messagingSenderId: "YOUR ID",
+  appId: "YOUR APPID"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // Initialize Database
+
 export const db = getFirestore(app);
