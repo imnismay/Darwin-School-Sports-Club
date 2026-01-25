@@ -141,3 +141,125 @@ input, select { width: 100%; border: none; background: transparent; padding: 14p
   .admin-container { max-width: 100%; }
   .table-container { box-shadow: none; }
 }
+
+/* --- NEW ADMIN STYLES --- */
+
+/* Tabs */
+.admin-tabs { display: flex; margin-bottom: 20px; background: white; padding: 5px; border-radius: 12px; gap: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.admin-tabs button { flex: 1; border: none; background: transparent; padding: 12px; border-radius: 8px; font-weight: 600; color: #64748B; cursor: pointer; transition: 0.2s; font-size: 13px; }
+.admin-tabs button.active { background: #EFF6FF; color: var(--blue); }
+
+/* Sport Selector (User Side) */
+.sport-grid-selector { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
+.sport-grid-selector button { border: 2px solid #E2E8F0; background: white; padding: 15px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; transition: 0.2s; color: #64748B; }
+.sport-grid-selector button.active { border-color: var(--primary); background: #F8FAFC; color: var(--primary); transform: scale(1.02); }
+.sport-grid-selector button svg { font-size: 20px; }
+.mini-price { font-size: 10px; background: var(--accent); color: white; padding: 2px 6px; border-radius: 4px; }
+
+/* Sports Manager (Admin Side) */
+.manager-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.manager-header h3 { margin: 0; color: var(--primary); }
+.add-btn { background: var(--blue); color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 5px; }
+
+.add-sport-form { background: white; padding: 15px; border-radius: 12px; margin-bottom: 20px; display: flex; gap: 10px; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.save-btn { background: var(--success); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+
+.sports-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+.sport-card-admin { background: white; padding: 15px; border-radius: 12px; display: flex; align-items: center; gap: 15px; border: 1px solid #E2E8F0; transition: 0.2s; position: relative; overflow: hidden; }
+.sport-card-admin.inactive { opacity: 0.7; background: #F1F5F9; }
+.sport-card-admin.inactive::after { content: "CLOSED"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-20deg); font-size: 30px; font-weight: 800; color: rgba(0,0,0,0.1); pointer-events: none; }
+
+.sc-icon { width: 40px; height: 40px; background: #EFF6FF; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 18px; }
+.sc-info { flex: 1; }
+.sc-info h4 { margin: 0 0 5px 0; font-size: 14px; color: var(--primary); }
+.sc-info p { margin: 0; font-size: 12px; color: #64748B; }
+
+.status-badge { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+.status-badge.open { background: #DCFCE7; color: var(--success); }
+.status-badge.closed { background: #FEE2E2; color: var(--danger); }
+
+.sc-actions { display: flex; gap: 5px; }
+.sc-actions button { width: 30px; height: 30px; border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+.toggle-btn { background: #E0E7FF; color: var(--primary); }
+.edit-btn { background: #FEF3C7; color: #D97706; }
+.del-btn { background: #FEE2E2; color: var(--danger); }
+.seed-btn { margin: 20px auto; display: block; padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; }
+/* --- VISUAL SLOT GRID STYLES --- */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.slot-btn {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.slot-btn.available {
+  background: #DCFCE7;
+  color: #166534;
+  border-color: #BBF7D0;
+}
+
+.slot-btn.available:hover {
+  background: #BBF7D0;
+  transform: translateY(-2px);
+}
+
+.slot-btn.booked {
+  background: #F1F5F9;
+  color: #94A3B8;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.slot-btn.selected {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
+.slot-legend {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 11px;
+  color: #64748B;
+}
+
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot.green { background: #166534; }
+.dot.red { background: #94A3B8; }
+.dot.blue { background: var(--blue); }
+
+.duration-select {
+  background: #EFF6FF;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 400px) {
+  .slot-grid { grid-template-columns: repeat(3, 1fr); }
+}
